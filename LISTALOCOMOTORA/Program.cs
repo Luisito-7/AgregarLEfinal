@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +39,9 @@ namespace LISTALOCOMOTORA
             {
                 Console.WriteLine("El valor 50 no existe en la lista");
             }
+
+            l.Ordenar();
+            Console.WriteLine("Asi se ve el orden: " + l.VerVagones());
         }
     }
 }

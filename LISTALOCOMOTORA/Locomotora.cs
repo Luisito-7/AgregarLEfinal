@@ -146,7 +146,30 @@ namespace LISTALOCOMOTORA
                     }
                 }
             }
+        }
 
+        public void Ordenar()
+        {
+            if (Primero == null || Primero.Sig == null)
+            {
+                return;
+            }
+
+            Vagon actual;
+            for (actual = Primero; actual != null; actual = actual.Sig)
+            {
+                Vagon siguiente = actual.Sig;
+                while (siguiente != null)
+                {
+                    if (actual.Dato > siguiente.Dato)
+                    {
+                        int temp = actual.Dato;
+                        actual.Dato = siguiente.Dato;
+                        siguiente.Dato = temp;
+                    }
+                    siguiente = siguiente.Sig;
+                }
+            }
         }
 
         public string VerVagones()
